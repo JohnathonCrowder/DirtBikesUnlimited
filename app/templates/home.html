@@ -1,6 +1,40 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Welcome to Dirt Bikes Unlimited</h1>
-<p>Your trusted motorcycle repair specialists.</p>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Expert Repairs for Your Dirt Bike Dreams</h1>
+        <p>Professional service, lightning-fast turnaround, unbeatable expertise.</p>
+        <a href="/services" class="btn-primary">Explore Services</a>
+    </div>
+</section>
+
+<section class="services container">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+        <div class="service-card">
+            <i class="fas fa-wrench"></i>
+            <h3>Basic Tune-Up</h3>
+            <p>Keep your bike in peak condition.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-cogs"></i>
+            <h3>Major Overhauls</h3>
+            <p>Complete rebuild and restoration.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-tachometer-alt"></i>
+            <h3>Performance Upgrades</h3>
+            <p>Push your bike to its limits.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>Ready to elevate your ride?</h2>
+        <p>Schedule a service today and experience the DBU difference!</p>
+        <a href="/contact" class="btn-secondary">Contact Us</a>
+    </div>
+</section>
 {% endblock %}
