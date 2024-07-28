@@ -1,11 +1,28 @@
+// Initialize GSAP plugins
+gsap.registerPlugin(ScrollTrigger);
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize all functions when DOM is fully loaded
     initNavbarScroll();
     initScrollAnimations();
     initSmoothScroll();
     initParallaxEffects();
     initServiceCardHover();
+    animateHeroContent();
 });
+
+// Animate hero content on page load
+function animateHeroContent() {
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+        gsap.from(heroContent.children, {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            stagger: 0.3,
+            ease: "power2.out"
+        });
+    }
+}
 
 // Change navbar style on scroll
 function initNavbarScroll() {
@@ -19,6 +36,54 @@ function initNavbarScroll() {
     });
 }
 
+// Enhanced Parallax Effect
+function initParallaxEffects() {
+    const parallaxElements = document.querySelectorAll('.parallax');
+    parallaxElements.forEach(el => {
+        const speed = el.dataset.speed || 0.5;
+        gsap.to(el, {
+            backgroundPositionY: () => innerHeight * speed * -1,
+            ease: "none",
+            scrollTrigger: {
+                trigger: el,
+                start: "top top",
+                end: "bottom top",
+                scrub: true
+            }
+        });
+    });
+}
+
+// Enhanced Scroll Animations
+function initScrollAnimations() {
+    // General fade-in elements
+    gsap.utils.toArray('.fade-in').forEach(element => {
+        gsap.from(element, { 
+            opacity: 0, 
+            y: 50, 
+            duration: 1, 
+            scrollTrigger: {
+                trigger: element,
+                start: "top 80%",
+                toggleActions: "play none none none"
+            }
+        });
+    });
+
+    // Special staggered animation for service cards
+    const serviceCards = gsap.utils.toArray('.service-card');
+    gsap.from(serviceCards, {
+        opacity: 0,
+        y: 100,
+        stagger: 0.2,  // Cards will animate in sequence
+        duration: 0.8,
+        scrollTrigger: {
+            trigger: ".service-grid",
+            start: "top 75%",
+        }
+    });
+}
+
 // Smooth scroll for navigation links
 function initSmoothScroll() {
     const links = document.querySelectorAll("a[href^='#']");
@@ -26,33 +91,7 @@ function initSmoothScroll() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
-            document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-}
-
-// Initialize sliding animations on scroll
-function initScrollAnimations() {
-    const elements = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.1 });
-
-    elements.forEach(el => observer.observe(el));
-}
-
-// Create parallax scrolling effects
-function initParallaxEffects() {
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const parallaxBackgrounds = document.querySelectorAll('.parallax');
-        parallaxBackgrounds.forEach(bg => {
-            const speed = bg.dataset.speed || 0.5;
-            bg.style.backgroundPositionY = -(scrolled * speed) + 'px';
+            gsap.to(window, {duration: 1, scrollTo: targetId, ease: "power2.inOut"});
         });
     });
 }
@@ -72,21 +111,28 @@ function initServiceCardHover() {
 
 // Dynamic counter animation (for stats or facts)
 function animateCounter(element, target, duration = 2000) {
-    let start = 0;
-    const increment = target / 100;
-    const timer = setInterval(() => {
-        start += increment;
-        element.textContent = Math.floor(start);
-        if (start >= target) {
-            clearInterval(timer);
-            element.textContent = target;
+    gsap.to(element, {
+        textContent: target, 
+        duration: duration / 1000, 
+        ease: "power1.out",
+        snap: { textContent: 1 },
+        stagger: {
+            each: 0.15,
+            onUpdate: function() {
+                this.targets()[0].innerHTML = Math.ceil(this.targets()[0].textContent);
+            },
         }
-    }, duration / 100);
+    });
 }
 
-// Example usage: 
-// Call this when stats section comes into view
-// animateCounter(document.getElementById('bikesRepaired'), 5000);
+// Example: Use this where you have counter elements
+// document.querySelectorAll('.counter').forEach(counter => {
+//     const target = parseInt(counter.getAttribute('data-target'), 10);
+//     ScrollTrigger.create({
+//         trigger: counter,
+//         onEnter: () => animateCounter(counter, target)
+//     });
+// });
 
 // Simple form validation (for contact forms)
 function validateForm(formId) {
@@ -105,11 +151,3 @@ function validateForm(formId) {
         if (!valid) e.preventDefault();
     });
 }
-
-// Optional: Preloader
-window.addEventListener('load', () => {
-    const preloader = document.querySelector('.preloader');
-    if (preloader) {
-        preloader.classList.add('preloader--hidden');
-    }
-});

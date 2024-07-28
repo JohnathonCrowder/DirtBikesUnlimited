@@ -13,3 +13,7 @@ def services():
 @main.route('/contact')
 def contact():
     return render_template('contact.html')
+
+@main.route('/about')
+def about():
+    return render_template('about.html')

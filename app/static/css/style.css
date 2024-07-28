@@ -121,14 +121,15 @@ nav .btn-primary {
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/static/images/hero-dirt-bike.jpg");
+    url("/static/images/hero-dirt-bike.jpg") no-repeat center center fixed;
   background-size: cover;
-  background-position: center;
-  height: 70vh;
+  height: 100vh; /* Changed from 70vh to full viewport for better parallax effect */
   display: flex;
   align-items: center;
   text-align: center;
   color: white;
+  position: relative;
+  overflow: hidden; /* Important for parallax */
 }
 
 .hero-content {
