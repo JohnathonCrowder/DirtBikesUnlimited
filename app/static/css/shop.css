@@ -24,7 +24,7 @@
 /* Store Benefits */
 .store-benefits {
   padding: 80px 0;
-  background: linear-gradient(135deg, #f8f8f8, #e6e6e6);
+  background: #f9f9f9; /* Changed from gradient to solid color for better contrast */
 }
 
 .benefit-grid {
@@ -35,21 +35,33 @@
 
 .benefit-item {
   text-align: center;
-  padding: 30px;
+  padding: 40px 30px; /* Increased padding for better spacing */
   background-color: white;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Increased shadow for better visibility */
   border-radius: 10px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .benefit-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px); /* Increased lift on hover */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
 .benefit-item i {
-  font-size: 3rem;
+  font-size: 3.5rem; /* Slightly larger icons */
   color: var(--accent-color);
   margin-bottom: 20px;
+}
+
+.benefit-item h3 {
+  font-size: 1.5rem; /* Larger title font */
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.benefit-item p {
+  color: #555; /* Slightly darker text for better readability */
+  line-height: 1.6; /* Increased line height for better readability */
 }
 
 /* Product Categories */
