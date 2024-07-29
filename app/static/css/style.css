@@ -132,6 +132,11 @@ nav .btn-primary {
   overflow: hidden; /* Important for parallax */
 }
 
+.hero .btn-primary {
+  display: inline-block; /* Ensure the button is displayed */
+  opacity: 1; /* Start fully visible */
+}
+
 .hero-content {
   max-width: 800px;
   margin: 0 auto;
