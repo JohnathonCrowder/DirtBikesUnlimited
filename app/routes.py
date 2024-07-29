@@ -17,3 +17,7 @@ def contact():
 @main.route('/about')
 def about():
     return render_template('about.html')
+
+@main.route('/shop')
+def shop():
+    return render_template('shop.html')

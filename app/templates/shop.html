@@ -1,0 +1,302 @@
+{% extends "base.html" %}
+
+{% block title %}Premium Dirt Bike Products - Dirt Bikes Unlimited{% endblock %}
+
+{% block content %}
+<!-- Hero Section with Parallax -->
+<section class="shop-hero parallax" data-speed="0.5">
+    <div class="container">
+        <h1 class="fade-in">Premium Dirt Bike Products</h1>
+        <p class="fade-in">Experience our extensive selection of top-quality products in-store</p>
+        <a href="{{ url_for('main.contact') }}" class="btn-primary fade-in">Visit Our Shop</a>
+    </div>
+</section>
+
+<!-- Store Benefits -->
+<section class="store-benefits">
+    <div class="container">
+        <h2 class="section-title fade-in">Why Shop In-Store?</h2>
+        <div class="benefit-grid fade-in">
+            <div class="benefit-item" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-hands-helping"></i>
+                <h3>Expert Guidance</h3>
+                <p>Our knowledgeable staff will help you find the perfect product.</p>
+            </div>
+            <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-eye"></i>
+                <h3>See & Feel Products</h3>
+                <p>Get hands-on with our products before you buy.</p>
+            </div>
+            <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-box-open"></i>
+                <h3>Immediate Availability</h3>
+                <p>Take your products home on the same day - no waiting.</p>
+            </div>
+            <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-percentage"></i>
+                <h3>Exclusive Deals</h3>
+                <p>Access special promotions only available in-store.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Categories (Masonry Layout) -->
+<section class="shop-categories">
+    <div class="container">
+        <h2 class="section-title fade-in">Explore Our In-Store Collection</h2>
+        <div class="masonry-grid fade-in">
+            <div class="category-card large">
+                <img src="{{ url_for('static', filename='images/shop/parts-category.jpg') }}" alt="Dirt Bike Parts">
+                <div class="category-overlay">
+                    <h3>Parts</h3>
+                    <p>Top-quality OEM and aftermarket parts for your bike.</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="{{ url_for('static', filename='images/shop/accessories-category.jpg') }}" alt="Dirt Bike Accessories">
+                <div class="category-overlay">
+                    <h3>Accessories</h3>
+                    <p>Upgrade your ride with our range of accessories.</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="{{ url_for('static', filename='images/shop/gear-category.jpg') }}" alt="Riding Gear">
+                <div class="category-overlay">
+                    <h3>Riding Gear</h3>
+                    <p>Stay protected with our selection of riding gear.</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="{{ url_for('static', filename='images/shop/tools-category.jpg') }}" alt="Tools & Maintenance">
+                <div class="category-overlay">
+                    <h3>Tools & Maintenance</h3>
+                    <p>Keep your bike in top shape with our tools and products.</p>
+                </div>
+            </div>
+            <div class="category-card large">
+                <img src="{{ url_for('static', filename='images/shop/tires-category.jpg') }}" alt="Tires & Wheels">
+                <div class="category-overlay">
+                    <h3>Tires & Wheels</h3>
+                    <p>Grip the terrain with our selection of tires and wheels.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Products (Carousel) -->
+<section class="featured-products">
+    <div class="container">
+        <h2 class="section-title fade-in">Featured Products</h2>
+        <div class="product-carousel fade-in">
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='images/shop/product1.jpg') }}" alt="Product 1">
+                <h3>Pro Series X2 Handlebars</h3>
+                <p class="price">$129.99</p>
+            </div>
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='images/shop/product2.jpg') }}" alt="Product 2">
+                <h3>DirtMaster H7 Helmet</h3>
+                <p class="price">$299.99</p>
+            </div>
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='images/shop/product3.jpg') }}" alt="Product 3">
+                <h3>SuperGrip Off-Road Tires</h3>
+                <p class="price">$89.99 each</p>
+            </div>
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='images/shop/product4.jpg') }}" alt="Product 4">
+                <h3>Ultra-Flex Racing Boots</h3>
+                <p class="price">$249.99</p>
+            </div>
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='images/shop/product5.jpg') }}" alt="Product 5">
+                <h3>RaceTech Oil Filter</h3>
+                <p class="price">$19.99</p>
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="{{ url_for('main.contact') }}" class="btn-primary">Check In-Store Availability</a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials (Carousel) -->
+<section class="testimonials-section">
+    <div class="container">
+        <h2 class="section-title fade-in">What Our Customers Say</h2>
+        <div class="testimonial-carousel fade-in">
+            <div class="testimonial">
+                <img src="{{ url_for('static', filename='images/testimonials/testimonial1.jpg') }}" alt="Customer 1">
+                <blockquote>"The staff here are so knowledgeable. They helped me find the perfect parts for my CRF450."</blockquote>
+                <cite>- Mike S.</cite>
+            </div>
+            <div class="testimonial">
+                <img src="{{ url_for('static', filename='images/testimonials/testimonial2.jpg') }}" alt="Customer 2">
+                <blockquote>"I love being able to see and try gear on before buying. Great selection and service!"</blockquote>
+                <cite>- Sarah L.</cite>
+            </div>
+            <div class="testimonial">
+                <img src="{{ url_for('static', filename='images/testimonials/testimonial3.jpg') }}" alt="Customer 3">
+                <blockquote>"Always a pleasure shopping here. Great prices and they always have what I need."</blockquote>
+                <cite>- Alex T.</cite>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Shop by Brand -->
+<section class="shop-brands">
+    <div class="container">
+        <h2 class="section-title fade-in">Top Brands Available In-Store</h2>
+        <div class="brand-grid fade-in">
+            <a href="#" class="brand-logo"><img src="{{ url_for('static', filename='images/brand-logos/honda.png') }}" alt="Honda"></a>
+            <a href="#" class="brand-logo"><img src="{{ url_for('static', filename='images/brand-logos/yamaha.png') }}" alt="Yamaha"></a>
+            <a href="#" class="brand-logo"><img src="{{ url_for('static', filename='images/brand-logos/ktm.png') }}" alt="KTM"></a>
+            <a href="#" class="brand-logo"><img src="{{ url_for('static', filename='images/brand-logos/suzuki.png') }}" alt="Suzuki"></a>
+            <a href="#" class="brand-logo"><img src="{{ url_for('static', filename='images/brand-logos/kawasaki.png') }}" alt="Kawasaki"></a>
+            <a href="#" class="brand-logo"><img src="{{ url_for('static', filename='images/brand-logos/husqvarna.png') }}" alt="Husqvarna"></a>
+        </div>
+    </div>
+</section>
+
+<!-- Store Information and Hours -->
+<section class="store-info">
+    <div class="container">
+        <div class="info-grid">
+            <div class="info-text fade-in">
+                <h2>Visit Us Today</h2>
+                <p>Experience our product range in person and get expert advice from our friendly staff.</p>
+                <a href="{{ url_for('main.contact') }}" class="btn-primary">Get Directions</a>
+            </div>
+            <div class="store-hours fade-in">
+                <h3>Store Hours</h3>
+                <ul class="hours-list">
+                    <li><span>Monday - Friday:</span> <strong id="weekday-hours">9:00 AM - 6:00 PM</strong></li>
+                    <li><span>Saturday:</span> <strong id="saturday-hours">10:00 AM - 4:00 PM</strong></li>
+                    <li><span>Sunday:</span> <strong>Closed</strong></li>
+                </ul>
+                <p id="open-status" class="open">We're Open!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call-to-Action with Parallax -->
+<section class="cta-section parallax" data-speed="0.5">
+    <div class="container fade-in">
+        <h2>Ready to Gear Up?</h2>
+        <p>Visit our store and explore our extensive range of dirt bike products. Get expert advice and take your purchases home today!</p>
+        <div class="cta-buttons">
+            <a href="{{ url_for('main.contact') }}" class="btn-primary">Find Our Shop</a>
+            <a href="tel:+15551234567" class="btn-secondary"><i class="fas fa-phone"></i> Call Us</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/shop.css') }}">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    $(document).ready(function(){
+        // Initialize AOS for animations
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Initialize slick carousels
+        $('.product-carousel').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+
+        $('.testimonial-carousel').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000
+        });
+
+        // Initialize masonry layout for product categories
+        $('.masonry-grid').masonry({
+            itemSelector: '.category-card',
+            columnWidth: '.category-card',
+            percentPosition: true
+        });
+
+        // Dynamic store hours and status
+        function updateStoreHours() {
+            const now = new Date();
+            const currentDay = now.getDay();
+            const currentHour = now.getHours();
+
+            const weekdayHours = document.getElementById('weekday-hours');
+            const saturdayHours = document.getElementById('saturday-hours');
+            const openStatus = document.getElementById('open-status');
+
+            if (currentDay >= 1 && currentDay <= 5) { // Monday to Friday
+                if (currentHour >= 9 && currentHour < 18) {
+                    openStatus.textContent = 'We\'re Open!';
+                    openStatus.classList.remove('closed');
+                    openStatus.classList.add('open');
+                } else {
+                    openStatus.textContent = 'Sorry, we\'re closed.';
+                    openStatus.classList.remove('open');
+                    openStatus.classList.add('closed');
+                }
+            } else if (currentDay === 6) { // Saturday
+                if (currentHour >= 10 && currentHour < 16) {
+                    openStatus.textContent = 'We\'re Open!';
+                    openStatus.classList.remove('closed');
+                    openStatus.classList.add('open');
+                } else {
+                    openStatus.textContent = 'Sorry, we\'re closed.';
+                    openStatus.classList.remove('open');
+                    openStatus.classList.add('closed');
+                }
+            } else { // Sunday
+                openStatus.textContent = 'Sorry, we\'re closed.';
+                openStatus.classList.remove('open');
+                openStatus.classList.add('closed');
+            }
+        }
+
+        // Update store hours on page load and every minute
+        updateStoreHours();
+        setInterval(updateStoreHours, 60000);
+    });
+</script>
+{% endblock %}
