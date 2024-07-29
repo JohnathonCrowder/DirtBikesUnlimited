@@ -17,8 +17,8 @@ function animateHeroContent() {
         gsap.to(heroContent.children, {  
             opacity: 1,
             y: 0,
-            duration: 1,
-            stagger: 0.3,
+            duration: 0.7,
+            stagger: 0.2,
             ease: "power2.out"
         });
     }
@@ -57,7 +57,8 @@ function initScrollAnimations() {
         gsap.from(element, {
             opacity: 0, 
             y: 50, 
-            duration: 1,
+            duration: 0.7,
+   stagger: 0.1,
             scrollTrigger: {
                 trigger: element,
                 start: "top 80%",
