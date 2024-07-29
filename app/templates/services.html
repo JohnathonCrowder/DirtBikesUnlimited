@@ -1,0 +1,484 @@
+{% extends "base.html" %}
+
+{% block title %}Expert Dirt Bike Services - Dirt Bikes Unlimited{% endblock %}
+
+{% block content %}
+<!-- Services Hero Section -->
+<section class="services-hero parallax" data-speed="0.5">
+    <div class="container">
+        <h1 class="fade-in">Expert Dirt Bike Services</h1>
+        <p class="fade-in">From tune-ups to full rebuilds, we keep your bike at peak performance</p>
+        <a href="#services-overview" class="btn-primary fade-in">Explore Our Services</a>
+    </div>
+</section>
+
+<!-- Services Overview -->
+<section id="services-overview" class="services-overview">
+    <div class="container">
+        <h2 class="section-title fade-in">Our Comprehensive Services</h2>
+        <div class="services-grid">
+            <div class="service-item fade-in">
+                <div class="service-icon"><i class="fas fa-wrench"></i></div>
+                <h3>Basic Tune-Up</h3>
+                <p>Keep your bike running smoothly with our thorough tune-up service. Includes oil change, filter replacement, and essential adjustments.</p>
+                <ul class="service-features">
+                    <li>Oil & Filter Change</li>
+                    <li>Brake Inspection</li>
+                    <li>Tire Pressure Check</li>
+                </ul>
+                <a href="#" class="btn-secondary">Schedule Tune-Up</a>
+            </div>
+            <div class="service-item fade-in">
+                <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                <h3>Engine Overhauls</h3>
+                <p>From minor repairs to complete rebuilds, our certified mechanics will breathe new life into your engine with precision and care.</p>
+                <ul class="service-features">
+                    <li>Cylinder Reconditioning</li>
+                    <li>Crankshaft Repair</li>
+                    <li>Valve Adjustment</li>
+                </ul>
+                <a href="#" class="btn-secondary">Consult on Overhaul</a>
+            </div>
+            <div class="service-item fade-in">
+                <div class="service-icon"><i class="fas fa-tachometer-alt"></i></div>
+                <h3>Performance Upgrades</h3>
+                <p>Take your ride to the next level with our custom performance enhancements. Boost power, improve handling, and dominate the track.</p>
+                <ul class="service-features">
+                    <li>Engine Tuning</li>
+                    <li>Exhaust Upgrades</li>
+                    <li>Suspension Mods</li>
+                </ul>
+                <a href="#" class="btn-secondary">Upgrade My Bike</a>
+            </div>
+            <div class="service-item fade-in">
+                <div class="service-icon"><i class="fas fa-tools"></i></div>
+                <h3>Repair & Restoration</h3>
+                <p>Whether it's crash damage or wear and tear, we'll meticulously restore your bike to its former glory or better.</p>
+                <ul class="service-features">
+                    <li>Frame Repair</li>
+                    <li>Paint Restoration</li>
+                    <li>Parts Replacement</li>
+                </ul>
+                <a href="#" class="btn-secondary">Start Restoration</a>
+            </div>
+            <div class="service-item fade-in">
+                <div class="service-icon"><i class="fas fa-oil-can"></i></div>
+                <h3>Suspension Service</h3>
+                <p>Optimize your bike's handling with our expert suspension service. We'll fine-tune your suspension for peak performance on any terrain.</p>
+                <ul class="service-features">
+                    <li>Fork Service</li>
+                    <li>Shock Rebuilding</li>
+                    <li>Custom Tuning</li>
+                </ul>
+                <a href="#" class="btn-secondary">Improve My Suspension</a>
+            </div>
+            <div class="service-item fade-in">
+                <div class="service-icon"><i class="fas fa-battery-full"></i></div>
+                <h3>Electrical Systems</h3>
+                <p>From simple battery replacements to complex wiring issues, we'll ensure your bike's electrical system is running at its best.</p>
+                <ul class="service-features">
+                    <li>Starter Motor Repair</li>
+                    <li>Lighting Upgrades</li>
+                    <li>Diagnostic Services</li>
+                </ul>
+                <a href="#" class="btn-secondary">Fix Electrical Issues</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Process -->
+<section class="service-process">
+    <div class="container">
+        <h2 class="section-title fade-in">Our Proven Service Process</h2>
+        <div class="process-steps">
+            <div class="process-step fade-in">
+                <div class="step-number">1</div>
+                <h4>Initial Consultation</h4>
+                <p>We discuss your bike's needs and your performance goals.</p>
+            </div>
+            <div class="process-step fade-in">
+                <div class="step-number">2</div>
+                <h4>Comprehensive Inspection</h4>
+                <p>Our experts thoroughly examine your bike, identifying any issues.</p>
+            </div>
+            <div class="process-step fade-in">
+                <div class="step-number">3</div>
+                <h4>Detailed Quote</h4>
+                <p>We provide a transparent, itemized quote for all required services.</p>
+            </div>
+            <div class="process-step fade-in">
+                <div class="step-number">4</div>
+                <h4>Expert Service</h4>
+                <p>Our skilled mechanics perform all necessary work with precision.</p>
+            </div>
+            <div class="process-step fade-in">
+                <div class="step-number">5</div>
+                <h4>Quality Assurance</h4>
+                <p>We rigorously test to ensure everything is perfect before delivery.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial -->
+<section class="testimonial-section">
+    <div class="container">
+        <div class="testimonial-card fade-in">
+            <img src="{{ url_for('static', filename='images/customer-avatar.jpg') }}" alt="Happy Customer" class="testimonial-avatar">
+            <blockquote>"The team at Dirt Bikes Unlimited are true professionals. They transformed my old XR400 into a beast! Couldn't be happier with the service and results."</blockquote>
+            <cite>- Alex Rider, Amateur Motocross Racer</cite>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing -->
+<section class="pricing">
+    <div class="container">
+        <h2 class="section-title fade-in">Transparent Pricing</h2>
+        <p class="section-subtitle fade-in">We believe in fair and upfront pricing. Here are our starting prices for common services:</p>
+        <div class="pricing-grid fade-in">
+            <div class="pricing-item">
+                <h4>Basic Tune-Up</h4>
+                <p class="price">From $99</p>
+                <ul>
+                    <li>Oil Change</li>
+                    <li>Filter Replacement</li>
+                    <li>Basic Adjustments</li>
+                </ul>
+            </div>
+            <div class="pricing-item">
+                <h4>Engine Rebuild</h4>
+                <p class="price">From $599</p>
+                <ul>
+                    <li>Complete Teardown</li>
+                    <li>Parts Replacement</li>
+                    <li>Reassembly & Testing</li>
+                </ul>
+            </div>
+            <div class="pricing-item">
+                <h4>Performance Package</h4>
+                <p class="price">From $299</p>
+                <ul>
+                    <li>Engine Tuning</li>
+                    <li>Exhaust Upgrade</li>
+                    <li>Suspension Adjustment</li>
+                </ul>
+            </div>
+            <div class="pricing-item">
+                <h4>Full Restoration</h4>
+                <p class="price">Custom Quote</p>
+                <ul>
+                    <li>Frame Repair</li>
+                    <li>Engine Rebuild</li>
+                    <li>Custom Paint Job</li>
+                </ul>
+            </div>
+        </div>
+        <p class="pricing-note fade-in">* Prices may vary depending on bike model and specific requirements. We always provide a detailed quote before beginning any work.</p>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container fade-in">
+        <h2>Ready to Elevate Your Ride?</h2>
+        <p>Our expert team is standing by to take your dirt bike to the next level.</p>
+        <a href="{{ url_for('main.contact') }}" class="btn-primary">Book Your Service Now</a>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .services-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/static/images/services-hero.jpg') no-repeat center center;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        padding: 150px 0;
+        position: relative;
+    }
+
+    .services-hero::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0));
+    }
+
+    .services-hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .services-hero p {
+        font-size: 1.3rem;
+        max-width: 600px;
+        margin: 0 auto 30px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    .services-overview {
+        padding: 100px 0;
+        background-color: #f9f9f9;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+        color: var(--primary-color);
+    }
+
+    .section-subtitle {
+        text-align: center;
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto 40px;
+        color: #666;
+    }
+
+    .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+    .service-item {
+        background-color: white;
+        padding: 40px 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .service-icon {
+        font-size: 3rem;
+        color: var(--accent-color);
+        margin-bottom: 20px;
+    }
+
+    .service-item h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: var(--primary-color);
+    }
+
+    .service-features {
+        list-style-type: none;
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    .service-features li {
+        padding: 5px 0;
+        font-size: 0.9rem;
+        color: #555;
+    }
+
+    .service-features li::before {
+        content: '✓';
+        color: var(--accent-color);
+        margin-right: 10px;
+    }
+
+    .service-process {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 100px 0;
+    }
+
+    .service-process .section-title {
+        color: white;
+    }
+
+    .process-steps {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+
+    .process-step {
+        text-align: center;
+        flex-basis: 18%;
+        position: relative;
+    }
+
+    .process-step::after {
+        content: '→';
+        position: absolute;
+        right: -15px;
+        top: 40px;
+        font-size: 2rem;
+        color: var(--accent-color);
+    }
+
+    .process-step:last-child::after {
+        content: none;
+    }
+
+    .step-number {
+        background-color: var(--accent-color);
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 20px;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .testimonial-section {
+        background-color: #f9f9f9;
+        padding: 80px 0;
+    }
+
+    .testimonial-card {
+        background-color: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .testimonial-avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+
+    .testimonial-card blockquote {
+        font-style: italic;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .testimonial-card cite {
+        font-weight: bold;
+        color: var(--accent-color);
+    }
+
+    .pricing {
+        padding: 100px 0;
+        background-color: white;
+    }
+
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+    }
+
+    .pricing-item {
+        background-color: #f9f9f9;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pricing-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .pricing-item h4 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        color: var(--primary-color);
+    }
+
+    .price {
+        font-size: 2rem;
+        color: var(--accent-color);
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .pricing-item ul {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .pricing-item ul li {
+        padding: 5px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .pricing-note {
+        font-size: 0.9rem;
+        font-style: italic;
+        margin-top: 30px;
+        text-align: center;
+        color: #666;
+    }
+
+    .cta-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/static/images/cta-background.jpg') no-repeat center center;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        padding: 100px 0;
+    }
+
+    .cta-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .cta-section p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (min-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+    @media (max-width: 768px) {
+        .services-hero h1 {
+            font-size: 2.5rem;
+        }
+
+        .process-steps {
+            flex-direction: column;
+        }
+
+        .process-step {
+            margin-bottom: 30px;
+        }
+
+        .process-step::after {
+            content: '↓';
+            right: 50%;
+            top: auto;
+            bottom: -30px;
+        }
+    }
+</style>
+{% endblock %}

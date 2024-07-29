@@ -1,40 +1,248 @@
 {% extends "base.html" %}
 
+{% block title %}Dirt Bikes Unlimited - Expert Motorcycle Repairs{% endblock %}
+
 {% block content %}
+<!-- Hero Section -->
 <section class="hero parallax" data-speed="0.5">
     <div class="hero-content">
         <h1 class="fade-in">Expert Repairs for Your Dirt Bike Dreams</h1>
         <p class="fade-in">Professional service, lightning-fast turnaround, unbeatable expertise.</p>
-        <a href="{{ url_for('main.services') }}" class="btn-primary fade-in">Explore Our Services</a>
+        <div class="hero-buttons fade-in">
+            <a href="{{ url_for('main.services') }}" class="btn-primary">Explore Our Services</a>
+            <a href="{{ url_for('main.contact') }}" class="btn-secondary">Book Appointment</a>
+        </div>
     </div>
 </section>
 
+<!-- Quick Info Banner -->
+<div class="quick-banner fade-in">
+    <div class="container">
+        <div class="banner-item">
+            <i class="fas fa-clock"></i>
+            <span>Open 7 Days: 8am - 6pm</span>
+        </div>
+        <div class="banner-item">
+            <i class="fas fa-phone"></i>
+            <span>(555) 123-4567</span>
+        </div>
+        <div class="banner-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>123 Dirt Track Way, Moto City</span>
+        </div>
+    </div>
+</div>
+
+<!-- Services Section -->
 <section class="services container">
-    <h2>Our Services</h2>
+    <h2 class="section-title fade-in">Our Expert Services</h2>
     <div class="service-grid">
         <div class="service-card fade-in">
             <i class="fas fa-wrench"></i>
             <h3>Basic Tune-Up</h3>
-            <p>Keep your bike in peak condition.</p>
+            <p>Keep your bike in top condition with our comprehensive tune-ups.</p>
+            <a href="#" class="btn-secondary">Learn More</a>
         </div>
         <div class="service-card fade-in">
             <i class="fas fa-cogs"></i>
-            <h3>Major Overhauls</h3>
-            <p>Complete rebuild and restoration.</p>
+            <h3>Engine Overhauls</h3>
+            <p>Complete engine rebuilds and repairs for all dirt bike models.</p>
+            <a href="#" class="btn-secondary">Learn More</a>
         </div>
         <div class="service-card fade-in">
             <i class="fas fa-tachometer-alt"></i>
             <h3>Performance Upgrades</h3>
-            <p>Push your bike to its limits.</p>
+            <p>Custom enhancements to take your ride to the next level.</p>
+            <a href="#" class="btn-secondary">Learn More</a>
+        </div>
+        <div class="service-card fade-in">
+            <i class="fas fa-tools"></i>
+            <h3>Repair & Restoration</h3>
+            <p>From minor fixes to complete restorations, we've got you covered.</p>
+            <a href="#" class="btn-secondary">Learn More</a>
         </div>
     </div>
 </section>
 
-<section class="cta">
-    <div class="container">
-        <h2>Ready to elevate your ride?</h2>
-        <p>Schedule a service today and experience the DBU difference!</p>
-        <a href="/contact" class="btn-secondary">Contact Us</a>
+<!-- Statistics Section -->
+<section class="stats-section">
+    <div class="container fade-in">
+        <div class="stat-item">
+            <h3>25+</h3>
+            <p>Years Experience</p>
+        </div>
+        <div class="stat-item">
+            <h3>15,000+</h3>
+            <p>Bikes Repaired</p>
+        </div>
+        <div class="stat-item">
+            <h3>98%</h3>
+            <p>Customer Satisfaction</p>
+        </div>
     </div>
 </section>
+
+<!-- Why Choose Us -->
+<section class="why-choose-us container">
+    <h2 class="section-title fade-in">Why Choose DBU?</h2>
+    <div class="choose-grid fade-in">
+        <div class="choose-item">
+            <i class="fas fa-certificate"></i>
+            <h4>Certified Mechanics</h4>
+            <p>All our mechanics are certified and have over 10 years of experience.</p>
+        </div>
+        <div class="choose-item">
+            <i class="fas fa-clock"></i>
+            <h4>Quick Turnaround</h4>
+            <p>Most repairs completed within 24-48 hours. Get back on your bike fast!</p>
+        </div>
+        <div class="choose-item">
+            <i class="fas fa-dollar-sign"></i>
+            <h4>Fair Pricing</h4>
+            <p>Transparent pricing, no hidden fees. We're always upfront about costs.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials-section">
+    <div class="container">
+        <h2 class="section-title fade-in">What Our Riders Say</h2>
+        <div class="testimonial-card fade-in">
+            <p>"These guys treat every bike like it's their own. I won't trust my KTM with anyone else. Seriously impressed!"</p>
+            <strong>— Mike Johnson, Pro-Amateur Rider</strong>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container fade-in">
+        <h2>Ready to Experience the DBU Difference?</h2>
+        <p>Schedule your service today and see why we're the most trusted name in dirt bike repair!</p>
+        <a href="{{ url_for('main.contact') }}" class="btn-primary">Book Your Service</a>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .quick-banner {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 15px 0;
+    }
+
+    .quick-banner .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .banner-item {
+        display: flex;
+        align-items: center;
+    }
+
+    .banner-item i {
+        margin-right: 10px;
+    }
+
+    .stats-section {
+        background-color: var(--accent-color);
+        color: white;
+        padding: 60px 0;
+    }
+
+    .stats-section .container {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    .stat-item h3 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .why-choose-us {
+        padding: 80px 0;
+    }
+
+    .choose-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .choose-item {
+        text-align: center;
+    }
+
+    .choose-item i {
+        font-size: 2.5rem;
+        color: var(--accent-color);
+        margin-bottom: 20px;
+    }
+
+    .testimonials-section {
+        background-color: var(--bg-light);
+        padding: 80px 0;
+    }
+
+    .testimonial-card {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .testimonial-card p {
+        font-style: italic;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .cta-section {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    .cta-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .cta-section p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (max-width: 768px) {
+        .quick-banner .container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .banner-item {
+            margin-bottom: 10px;
+        }
+
+        .stats-section .container {
+            flex-direction: column;
+        }
+
+        .stat-item {
+            margin-bottom: 30px;
+        }
+    }
+</style>
 {% endblock %}
