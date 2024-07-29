@@ -70,69 +70,97 @@ h6 {
 
 /* Navigation */
 .navbar {
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  position: relative;
 }
 
 .navbar .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 15px 0;
+  position: relative;
 }
 
-.logo img {
-  height: 50px;
-  width: auto;
-}
-
-.nav-links {
+.nav-section {
   display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.nav-links li {
-  margin: 0 15px;
+.nav-section:first-child {
+  left: 0;
 }
 
-.nav-links a {
-  color: #333;
+.nav-section:last-of-type {
+  right: 0;
+}
+
+.nav-link {
+  color: var(--primary-color);
   text-decoration: none;
-  font-weight: 500;
+  margin: 0 15px;
+  font-weight: 600;
   font-size: 16px;
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-link:hover {
   color: var(--accent-color);
 }
 
-.navbar .btn-primary {
-  padding: 10px 20px;
+.logo-container {
+  padding: 10px 0;
+}
+
+.logo img {
+  height: 100px; /* Larger logo */
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+.btn-navbar {
+  padding: 8px 20px;
+  font-size: 14px;
 }
 
 .mobile-menu-toggle {
   display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
 }
 
-.mobile-menu-toggle span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  margin: 5px 0;
-  transition: 0.4s;
+@media (max-width: 1024px) {
+  .nav-section {
+    display: none;
+  }
+
+  .logo-container {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 5px 0;
+    transition: 0.3s;
+  }
 }
 
 /* Hero Section */
