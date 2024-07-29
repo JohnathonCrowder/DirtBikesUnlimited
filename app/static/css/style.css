@@ -274,8 +274,3 @@ footer {
   transform: translateY(20px);
   transition: opacity 1s, transform 1s;
 }
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}

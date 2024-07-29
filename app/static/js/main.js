@@ -66,6 +66,10 @@ function initScrollAnimations() {
                 trigger: element,
                 start: "top 80%",
                 toggleActions: "play none none none"
+            },
+            onComplete: () => {
+                // Ensure the element stays visible after animation
+                gsap.set(element, { opacity: 1, y: 0 });
             }
         });
     });
@@ -75,11 +79,15 @@ function initScrollAnimations() {
     gsap.from(serviceCards, {
         opacity: 0,
         y: 100,
-        stagger: 0.2,  // Cards will animate in sequence
+        stagger: 0.2,
         duration: 0.8,
         scrollTrigger: {
             trigger: ".service-grid",
             start: "top 75%",
+        },
+        onComplete: () => {
+            // Ensure all cards stay visible after animation
+            gsap.set(serviceCards, { opacity: 1, y: 0 });
         }
     });
 }
